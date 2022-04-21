@@ -2,51 +2,33 @@ package ru.gb.pheonix;
 
 public class SumCheck {
     public static void main(String[] args) {
-        printWordNTimes();
-        within10and20();
-        isPositiveOrNegative();
-        isNegative();
-        leapYear();
+        printTextNTimes("abc", 3);
+
     }
 
-    public static boolean within10and20() {
-        int x1 = 7, x2 = 1;
+    public static boolean checkIfSumBetween10And20( int x1, int x2) {
         int sum = x1 + x2;
-        if (sum >= 10 && sum <= 20) {
-            return true;
-        } else {
-            return false;
-        }
+        return sum >= 10 && sum <= 20;
     }
 
-    public static void isPositiveOrNegative() {
-        int x = 20;
-        if (x >= 0) {
+    public static void printNumberSign(int a) {
+        if (a >= 0) {
             System.out.println(" Число положительное");
         } else {
             System.out.println(" Число отрицательное");
         }
     }
 
-    public static boolean isNegative() {
-        int x = 9;
-        if (x < 0) {
-            return true;
-        }
-        return false;
+    public static boolean isNegative(int a) {
+        return a < 0;
     }
 
-    public static void printWordNTimes() {
-        for (int i = 0; i < 3; i++) {
-            System.out.println(" Зима");
+    public static void printTextNTimes(String text, int n) {
+        for (int i = 0; i < n; i++) {
+            System.out.println(text);
         }
     }
-    public static void leapYear() {
-        int y1 = 2022;
-            if (y1 % 4 == 0 && y1 % 400 == 0 && y1 % 100 == 0){
-            System.out.println("год високосный");
-        } else {
-                System.out.println("год не високосный");
-            }
+    public static boolean isLeapYear(int year) {
+        return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
     }
 }
