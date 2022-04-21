@@ -6,6 +6,7 @@ public class SumCheck {
         within10and20();
         isPositiveOrNegative();
         isNegative();
+        leapYear();
     }
 
     public static boolean within10and20() {
@@ -16,7 +17,6 @@ public class SumCheck {
         } else {
             return false;
         }
-
     }
 
     public static void isPositiveOrNegative() {
@@ -40,5 +40,13 @@ public class SumCheck {
         for (int i = 0; i < 3; i++) {
             System.out.println(" Зима");
         }
+    }
+    public static void leapYear() {
+        int y1 = 2022;
+            if (y1 % 4 == 0 && y1 % 400 == 0 && y1 % 100 == 0){
+            System.out.println("год високосный");
+        } else {
+                System.out.println("год не високосный");
+            }
     }
 }
