@@ -42,11 +42,15 @@ public class Lesson3 {
         int[][] arr = new int[4][4];
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
-                if ((arr[0]/[0] && arr[1]/[1] && arr[2]/[2] && arr[3]/[3]) == 1 ){
-                    System.out.println(1);
+                if (i == j) ;
+                {
+                    arr[i][j] = 1;
+                } else{  // не понятно,почему подчёркивает?
+                    arr[i][j] = 0;
                 }
             }
+
         }
     }
-
 }
+
