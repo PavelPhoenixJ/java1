@@ -25,4 +25,7 @@ public class Employee {
         System.out.println("имя: "+name + ",  должность: "+post + ",  эл.почта: "+email + ",  номер телефона: "+phoneNumber + ",  з/п в евро: "+salary + ",  возраст: "+age);
 
     }
+    public int getAge() {
+        return age;
+    }
 }
