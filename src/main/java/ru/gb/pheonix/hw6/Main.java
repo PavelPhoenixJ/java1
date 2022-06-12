@@ -8,8 +8,13 @@ public class Main {
                 new Cat("Мурзик"),
                 new Dog("Барбос"),
                 new Cat("Мурка"),
-                new Dog("Бобик")
+                new Dog("Бобик"),
+                new Bird("Кеша")
         };
+
+        System.out.println("Animal.getCount() = " + Animal.getCount());
+        System.out.println("Cat.getCount() = " + Cat.getCount());
+
         final Random random = new Random();
 
 

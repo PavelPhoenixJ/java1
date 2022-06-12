@@ -1,29 +1,30 @@
 package ru.gb.pheonix.hw6;
 
 public class Cat extends Animal {
+
+    private static final int RUN_LIMIT = 200;
+    private static final int SWIM_LIMIT = 0;
+    private static int count;
+
     public Cat(String name) {
-        super(name);
+        super(name, RUN_LIMIT, SWIM_LIMIT);
+        count++;
     }
 
-    @Override
-    public void run(int length) {
-        if (length <= 200) {
-            System.out.println(this + " бежит " + length + " метров");
-        } else {
-            System.out.println(this + " не способен пробежать " + length + " метров");
-        }
-
-    }
 
     @Override
     public void swim(int length) {
-        System.out.println("Кот не умеет плавать");
+        System.out.println("Кот не умеет плавать ");
 
+    }
+
+    public static int getCount(){
+        return count;
     }
 
     @Override
     public String toString() {
-        return "Кот по имени" + getName();
+        return "Кот по имени " + getName();
     }
 
 

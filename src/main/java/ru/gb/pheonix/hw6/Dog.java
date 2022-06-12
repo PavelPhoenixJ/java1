@@ -1,31 +1,14 @@
 package ru.gb.pheonix.hw6;
 
 public class Dog extends Animal {
-    public Dog(String name) {
-        super(name);
-    }
 
-    @Override
-    public void run(int length) {
-        if (length <= 500) {
-            System.out.println(this + " бежит " + length + " метров");
-        } else {
-            System.out.println(this + " не способен пробежать " + length + " метров");
-        }
-    }
+    public static final int RUN_LIMIT = 500;
+    public static final int SWIM_LIMIT = 10;
 
-    @Override
-    public void swim(int length) {
-        if (length <= 10) {
-            System.out.println(this + " плывёт " + length + " метров");
-        } else {
-            System.out.println(this + " не способен проплыть " + length + " метров");
-        }
-    }
+    public Dog(String name) { super(name, RUN_LIMIT, SWIM_LIMIT);}
 
     @Override
     public String toString() {
-        return "Собака по имени" + getName();
-
+        return "Собака по имени " + getName();
     }
 }
