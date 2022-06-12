@@ -2,9 +2,9 @@ package ru.gb.pheonix.hw6;
 
 public abstract class Animal {
 
-    private String name;
-    private int runLimit;
-    private int swimLimit;
+    private final String name;
+    private final int runLimit;
+    private final int swimLimit;
     private static int count;
 
 
